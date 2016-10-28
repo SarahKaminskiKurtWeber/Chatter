@@ -18,7 +18,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44383</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -220,6 +220,14 @@
     <Compile Include="Migrations\201610281515553_ChatModelChangeAgain.Designer.cs">
       <DependentUpon>201610281515553_ChatModelChangeAgain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610281719237_RemovedFollowers.cs" />
+    <Compile Include="Migrations\201610281719237_RemovedFollowers.Designer.cs">
+      <DependentUpon>201610281719237_RemovedFollowers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610281738396_AddedSSL.cs" />
+    <Compile Include="Migrations\201610281738396_AddedSSL.Designer.cs">
+      <DependentUpon>201610281738396_AddedSSL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Chat.cs" />
@@ -335,6 +343,12 @@
     <EmbeddedResource Include="Migrations\201610281515553_ChatModelChangeAgain.resx">
       <DependentUpon>201610281515553_ChatModelChangeAgain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610281719237_RemovedFollowers.resx">
+      <DependentUpon>201610281719237_RemovedFollowers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610281738396_AddedSSL.resx">
+      <DependentUpon>201610281738396_AddedSSL.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -354,7 +368,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55260</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:55260/</IISUrl>
+          <IISUrl>https://localhost:44383/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

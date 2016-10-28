@@ -99,3 +99,5 @@ c:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Chatter\Chatter\obj\D
 c:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Chatter\Chatter\obj\Debug\Chatter.Migrations.InitialMigration.resources
 c:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Chatter\Chatter\obj\Debug\Chatter.Migrations.ChatModelChanges.resources
 c:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Chatter\Chatter\obj\Debug\Chatter.Migrations.ChatModelChangeAgain.resources
+c:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Chatter\Chatter\obj\Debug\Chatter.Migrations.RemovedFollowers.resources
+C:\Users\WeCanCodeIT\documents\visual studio 2015\Projects\Chatter\Chatter\obj\Debug\Chatter.Migrations.AddedSSL.resources

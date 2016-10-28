@@ -18,6 +18,6 @@ namespace Chatter.Models
         //[ForeignKey("IdentityUser")]
         //public int IdentityUserID { get; set; }
         public virtual ApplicationUser ApplicationUsers { get; set; }  
-        public virtual Chat Chats { get; set; }      
+        //public virtual Chat Chats { get; set; }      
     }
 }

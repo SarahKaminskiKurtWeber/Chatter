@@ -37,7 +37,7 @@ namespace Chatter.Controllers
         public ActionResult Follow(string username)
         {
             var targetUser = db.Users.Single(u => u.UserName == username);
-            targetUser.Followers.Add(CurrentUser);
+            targetUser.UserName.Equals(CurrentUser);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

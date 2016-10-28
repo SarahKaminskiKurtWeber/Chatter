@@ -15,8 +15,8 @@ namespace Chatter.Models
         public string IdentityUserName { get; set; }
         public virtual ICollection<Chat> ApplicationUsers { get; set; }
 
-        public virtual ICollection<ApplicationUser> Followers { get; set; }
-        public virtual ICollection<ApplicationUser> Following { get; set; }
+        //public virtual ICollection<ApplicationUser> Followers { get; set; }
+        //public virtual ICollection<ApplicationUser> Following { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
