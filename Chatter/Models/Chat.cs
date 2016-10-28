@@ -10,13 +10,14 @@ namespace Chatter.Models
 {
     public class Chat
     {
-        [Key]
+        //[Key]
         public int ChatID { get; set; }
         public string ChatText { get; set; }
-        public string ChatUserName { get; set; }
+        //public string ChatUserName { get; set; }
 
         //[ForeignKey("IdentityUser")]
         //public int IdentityUserID { get; set; }
-        public virtual ApplicationUser ApplicationUsers { get; set; }        
+        public virtual ApplicationUser ApplicationUsers { get; set; }  
+        public virtual Chat Chats { get; set; }      
     }
 }
