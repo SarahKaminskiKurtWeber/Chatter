@@ -11,16 +11,16 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Chats)
+            @Html.DisplayNameFor(model => model.UserName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Chats)
+            @Html.DisplayFor(model => model.ChatText)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Chats }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ChatID}) |
     @Html.ActionLink("Back to List", "Index")
 </p>

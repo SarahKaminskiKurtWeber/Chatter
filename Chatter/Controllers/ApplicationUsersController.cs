@@ -34,13 +34,13 @@ namespace Chatter.Controllers
                         select u;
             return View(users.ToList());
         }
-        public ActionResult Follow(string username)
-        {
-            var targetUser = db.Users.Single(u => u.UserName == username);
-            targetUser.UserName.Equals(CurrentUser);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+        //public ActionResult Follow(string username)
+        //{
+        //    var targetUser = db.Users.Single(u => u.UserName == username);
+        //    targetUser.UserName.Equals(CurrentUser);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
         protected override void Dispose(bool disposing)
         {
             if (disposing)

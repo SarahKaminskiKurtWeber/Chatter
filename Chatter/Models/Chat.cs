@@ -13,7 +13,7 @@ namespace Chatter.Models
         //[Key]
         public int ChatID { get; set; }
         public string ChatText { get; set; }
-        //public string ChatUserName { get; set; }
+        public string UserName { get; set; }
 
         //[ForeignKey("IdentityUser")]
         //public int IdentityUserID { get; set; }
