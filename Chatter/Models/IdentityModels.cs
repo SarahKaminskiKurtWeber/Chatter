@@ -11,9 +11,9 @@ namespace Chatter.Models
     public class ApplicationUser : IdentityUser
     {
 
-        public int IdentityID { get; set; }
-        public string IdentityUserName { get; set; }
-        public virtual ICollection<Chat> ApplicationUsers { get; set; }
+        public int ID { get; set; }
+        public string UserName { get; set; }
+        public virtual ICollection<Chat> Chats { get; set; }
 
         //public virtual ICollection<ApplicationUser> Followers { get; set; }
         //public virtual ICollection<ApplicationUser> Following { get; set; }
@@ -41,7 +41,7 @@ namespace Chatter.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<Chatter.Models.Chat> Chats { get; set; }
+        public System.Data.Entity.DbSet<Chatter.Models.Chat> ChatText { get; set; }
 
         //public System.Data.Entity.DbSet<Chatter.Models.ApplicationUser> ApplicationUsers { get; set; }
     }

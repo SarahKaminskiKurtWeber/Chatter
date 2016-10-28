@@ -10,24 +10,24 @@ using Chatter.Models;
 
 namespace Chatter.Controllers
 {
-    public class ChatsController : Controller
+    public class ChatTextController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Chats
+        // GET: ChatText
         public ActionResult Index()
         {
-            return View(db.Chats.ToList());
+            return View(db.ChatText.ToList());
         }
 
-        // GET: Chats/Details/5
+        // GET: ChatText/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Chat chat = db.Chats.Find(id);
+            Chat chat = db.ChatText.Find(id);
             if (chat == null)
             {
                 return HttpNotFound();
@@ -35,22 +35,22 @@ namespace Chatter.Controllers
             return View(chat);
         }
 
-        // GET: Chats/Create
+        // GET: ChatText/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Chats/Create
+        // POST: ChatText/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ChatID,Chats")] Chat chat)
+        public ActionResult Create([Bind(Include = "ChatID,ChatText")] Chat chat)
         {
             if (ModelState.IsValid)
             {
-                db.Chats.Add(chat);
+                db.ChatText.Add(chat);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -58,14 +58,14 @@ namespace Chatter.Controllers
             return View(chat);
         }
 
-        // GET: Chats/Edit/5
+        // GET: ChatText/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Chat chat = db.Chats.Find(id);
+            Chat chat = db.ChatText.Find(id);
             if (chat == null)
             {
                 return HttpNotFound();
@@ -73,12 +73,12 @@ namespace Chatter.Controllers
             return View(chat);
         }
 
-        // POST: Chats/Edit/5
+        // POST: ChatText/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ChatID,Chats")] Chat chat)
+        public ActionResult Edit([Bind(Include = "ChatID,ChatText")] Chat chat)
         {
             if (ModelState.IsValid)
             {
@@ -89,14 +89,14 @@ namespace Chatter.Controllers
             return View(chat);
         }
 
-        // GET: Chats/Delete/5
+        // GET: ChatText/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Chat chat = db.Chats.Find(id);
+            Chat chat = db.ChatText.Find(id);
             if (chat == null)
             {
                 return HttpNotFound();
@@ -104,13 +104,13 @@ namespace Chatter.Controllers
             return View(chat);
         }
 
-        // POST: Chats/Delete/5
+        // POST: ChatText/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Chat chat = db.Chats.Find(id);
-            db.Chats.Remove(chat);
+            Chat chat = db.ChatText.Find(id);
+            db.ChatText.Remove(chat);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

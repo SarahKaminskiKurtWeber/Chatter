@@ -8,7 +8,7 @@ namespace Chatter.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.Chats",
+                "dbo.ChatText",
                 c => new
                     {
                         ChatID = c.Int(nullable: false, identity: true),
@@ -26,11 +26,11 @@ namespace Chatter.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Chats", "ApplicationUsers_Id", "dbo.AspNetUsers");
-            DropIndex("dbo.Chats", new[] { "ApplicationUsers_Id" });
+            DropForeignKey("dbo.ChatText", "ApplicationUsers_Id", "dbo.AspNetUsers");
+            DropIndex("dbo.ChatText", new[] { "ApplicationUsers_Id" });
             DropColumn("dbo.AspNetUsers", "IdentityUserName");
             DropColumn("dbo.AspNetUsers", "IdentityID");
-            DropTable("dbo.Chats");
+            DropTable("dbo.ChatText");
         }
     }
 }

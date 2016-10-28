@@ -232,6 +232,14 @@
     <Compile Include="Migrations\201610281747327_FixedChatIndex.Designer.cs">
       <DependentUpon>201610281747327_FixedChatIndex.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610281815036_changedDatabase.cs" />
+    <Compile Include="Migrations\201610281815036_changedDatabase.Designer.cs">
+      <DependentUpon>201610281815036_changedDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610281827185_MinorChanges.cs" />
+    <Compile Include="Migrations\201610281827185_MinorChanges.Designer.cs">
+      <DependentUpon>201610281827185_MinorChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Chat.cs" />
@@ -355,6 +363,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610281747327_FixedChatIndex.resx">
       <DependentUpon>201610281747327_FixedChatIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610281815036_changedDatabase.resx">
+      <DependentUpon>201610281815036_changedDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610281827185_MinorChanges.resx">
+      <DependentUpon>201610281827185_MinorChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

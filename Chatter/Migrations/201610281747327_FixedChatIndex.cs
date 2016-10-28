@@ -7,12 +7,12 @@ namespace Chatter.Migrations
     {
         public override void Up()
         {
-            AddColumn("dbo.Chats", "UserName", c => c.String());
+            AddColumn("dbo.ChatText", "UserName", c => c.String());
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Chats", "UserName");
+            DropColumn("dbo.ChatText", "UserName");
         }
     }
 }

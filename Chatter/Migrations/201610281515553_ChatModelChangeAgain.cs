@@ -7,18 +7,18 @@ namespace Chatter.Migrations
     {
         public override void Up()
         {
-            AddColumn("dbo.Chats", "Chats_ChatID", c => c.Int());
-            CreateIndex("dbo.Chats", "Chats_ChatID");
-            AddForeignKey("dbo.Chats", "Chats_ChatID", "dbo.Chats", "ChatID");
-            DropColumn("dbo.Chats", "ChatUserName");
+            AddColumn("dbo.ChatText", "ChatText_ChatID", c => c.Int());
+            CreateIndex("dbo.ChatText", "ChatText_ChatID");
+            AddForeignKey("dbo.ChatText", "ChatText_ChatID", "dbo.ChatText", "ChatID");
+            DropColumn("dbo.ChatText", "ChatUserName");
         }
         
         public override void Down()
         {
-            AddColumn("dbo.Chats", "ChatUserName", c => c.String());
-            DropForeignKey("dbo.Chats", "Chats_ChatID", "dbo.Chats");
-            DropIndex("dbo.Chats", new[] { "Chats_ChatID" });
-            DropColumn("dbo.Chats", "Chats_ChatID");
+            AddColumn("dbo.ChatText", "ChatUserName", c => c.String());
+            DropForeignKey("dbo.ChatText", "ChatText_ChatID", "dbo.ChatText");
+            DropIndex("dbo.ChatText", new[] { "ChatText_ChatID" });
+            DropColumn("dbo.ChatText", "ChatText_ChatID");
         }
     }
 }
